@@ -1,6 +1,6 @@
 import streamlit as st
 from mega import Mega
-from zipfile import Zipfile
+import zipfile
 import os
 
 # Download model files if they don't exist #
@@ -9,7 +9,7 @@ if not os.isdir("./models"):
     mega.download_url(
         "https://mega.nz/#!S4AGzQJD!UH7B5SV7DJSTqKvtbFKqFkjdAh60kpdhTk9WerI-Q1I"
     )
-    with ZipFile("./maps_BtoA.zip", "r") as zip_ref:
+    with zipfile.ZipFile("./maps_BtoA.zip", "r") as zip_ref:
         zip_ref.extractall("./models")
 
 from streamlit_auxlib import *
