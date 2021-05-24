@@ -4,7 +4,7 @@ import zipfile
 import os
 
 # Download model files if they don't exist #
-if not os.isdir("./models"):
+if not os.path.isdir("./models"):
     mega = Mega()
     mega.download_url(
         "https://mega.nz/#!S4AGzQJD!UH7B5SV7DJSTqKvtbFKqFkjdAh60kpdhTk9WerI-Q1I"
