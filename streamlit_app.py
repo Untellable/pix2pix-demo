@@ -1,4 +1,3 @@
-from streamlit_auxlib import *
 import streamlit as st
 from mega import Mega
 from zipfile import Zipfile
@@ -12,6 +11,8 @@ if not os.isdir("./models"):
     )
     with ZipFile("./maps_BtoA.zip", "r") as zip_ref:
         zip_ref.extractall("./models")
+
+from streamlit_auxlib import *
 
 # Web app formatting #
 def display_random_example():
