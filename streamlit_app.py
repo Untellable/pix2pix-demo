@@ -6,11 +6,14 @@ import os
 # Download model files if they don't exist #
 if not os.path.isdir("./models"):
     mega = Mega()
-    mega.download_url(
-        "https://mega.nz/#!S4AGzQJD!UH7B5SV7DJSTqKvtbFKqFkjdAh60kpdhTk9WerI-Q1I"
-    )
+    try:
+        mega.download_url(
+            "https://mega.nz/#!S4AGzQJD!UH7B5SV7DJSTqKvtbFKqFkjdAh60kpdhTk9WerI-Q1I"
+        )
+    except PermissionError:
+        pass
     with zipfile.ZipFile("./maps_BtoA.zip", "r") as zip_ref:
-        zip_ref.extractall("./models")
+        zip_ref.extractall("./models/maps_BtoA")
 
 from streamlit_auxlib import *
 
