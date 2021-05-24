@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 tensorflow = "==1.15.0"
 streamlit = "*"
+"mega.py" = "*"
 
 [dev-packages]
 
