@@ -4,3 +4,4 @@ test
 models
 .idea
 train
+Pipfile*
